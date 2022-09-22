@@ -1,5 +1,5 @@
 #Archivo de Gladle
-/.gradle/
+.gradle/
 
 #Archivos de Intellij
 *.iml
