@@ -1,4 +1,12 @@
+#Archivo de Gladle
 /.gradle/
+
+#Archivos de Intellij
+*.iml
 /.idea/
+
+#Build generado del paquete negocio
 /negocio/buid/
+
+#Archivos compilados
 *.class
