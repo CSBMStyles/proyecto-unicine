@@ -1,5 +1,5 @@
-/.gradle/
-*.iml
 /.idea/
 /negocio/build/
 *.class
+*.iml
+/.gradle/
