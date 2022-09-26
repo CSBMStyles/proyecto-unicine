@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,15 +12,8 @@ import java.util.Objects;
 @AllArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@ToString(onlyExplicitlyIncluded = true)
-public class Autor implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
-    private Integer codigo;
-
-    @ToString.Include
-    @Column(length = 100, nullable = false)
-    private String nombre;
+@ToString//(onlyExplicitlyIncluded = true)
+public class Autor extends Persona implements Serializable {
+    @ManyToMany(mappedBy = "autores")
+    private List<Libro> libros;
 }

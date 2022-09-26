@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -21,4 +21,7 @@ public class Cuidad implements Serializable {
 
     @Column(length = 100, nullable = false)
     private String nombre;
+
+    @OneToMany(mappedBy = "ciudad")
+    private List<Cliente> clientes;
 }
